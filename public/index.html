@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario de Préstamo</title>
+  </head>
+  <body>
+    <h1>Formulario de Préstamo de Libros</h1>
+    <form action="http://localhost:3000/prestamo" method="post">
+      <label for="id">ID:</label>
+      <input type="text" id="id" name="id" required /><br /><br />
+
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required /><br /><br />
+
+      <label for="apellido">Apellido:</label>
+      <input type="text" id="apellido" name="apellido" required /><br /><br />
+
+      <label for="titulo">Título del Libro:</label>
+      <input type="text" id="titulo" name="titulo" required /><br /><br />
+
+      <label for="autor">Autor del Libro:</label>
+      <input type="text" id="autor" name="autor" required /><br /><br />
+
+      <label for="editorial">Editorial:</label>
+      <input type="text" id="editorial" name="editorial" required /><br /><br />
+
+      <label for="año">Año de Publicación:</label>
+      <input type="text" id="año" name="año" required /><br /><br />
+
+      <input type="submit" value="Enviar" />
+    </form>
+  </body>
+</html>
