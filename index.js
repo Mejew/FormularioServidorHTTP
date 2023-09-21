@@ -1,15 +1,13 @@
 const express = require("express");
 const fs = require("fs");
 const app = express();
-const port = 3000; // Cambia el puerto según tus necesidades
+const port = 3000;
 
-// Middleware para archivos estáticos
+// Middleware
 app.use(express.static("public"));
 
 // Middleware para parsear el body del request
 app.use(express.urlencoded({ extended: true }));
-
-// Ruta para manejar el envío del formulario
 app.post("/prestamo", (req, res) => {
   const { id, nombre, apellido, titulo, autor, editorial, año } = req.body;
 
@@ -17,21 +15,15 @@ app.post("/prestamo", (req, res) => {
   if (!id || !nombre || !apellido || !titulo || !autor || !editorial || !año) {
     return res.redirect("/error.html");
   }
-
   // Crear el contenido del archivo txt
   const contenido = `${id}, ${nombre}, ${apellido}, ${titulo}, ${autor}, ${editorial}, ${año}`;
-
   // Nombre del archivo basado en el ID
   const archivoNombre = `data/id_${id}.txt`;
-
-  // Escribir el archivo en el sistema de archivos
   fs.writeFile(archivoNombre, contenido, (err) => {
     if (err) {
       console.error(err);
       return res.status(500).send("Error interno del servidor: " + err.message);
     }
-
-    // Descargar el archivo txt generado
     res.download(archivoNombre, (err) => {
       if (err) {
         console.error(err);
@@ -42,7 +34,6 @@ app.post("/prestamo", (req, res) => {
     });
   });
 });
-
 app.listen(port, () => {
   console.log(`Servidor corriendo en el puerto ${port}`);
 });

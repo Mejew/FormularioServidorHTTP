@@ -1,0 +1,52 @@
+body {
+    background-color: #d1b1e0;
+    
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    margin: 20px;
+  }
+  
+  h1 {
+    font-family: Arial, sans-serif;
+    background-color: #b93cf3;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(251, 251, 251);
+    text-align: center;
+    color: #fff;
+
+  }
+  
+  /* Define estilos para las etiquetas <label> */
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align: center;
+
+  }
+  
+  /* Define estilos para los <input> de texto */
+  input[type="text"] {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    margin: 1%;
+  }
+  
+  /* Define estilos para el botón de envío */
+  input[type="submit"] {
+    background-color: #b93cf3;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    margin: 0 auto;
+  }
+  
