@@ -3,54 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Formulario de Préstamo</title>
     <link rel="stylesheet" href="estilos.css" />
+
+    <title>Formulario de Préstamo</title>
   </head>
   <body>
     <h1>Formulario de Préstamo de Libros</h1>
     <form action="http://localhost:3000/prestamo" method="post">
-      <h2>Datos de usuario</h2>
+      <h2>Datos el usuario</h2>
       <label for="id">ID:</label>
-      <input type="text" placeholder="Ingrese su id" name="id" /><br /><br />
+      <input type="text" id="id" name="id" /><br /><br />
 
       <label for="nombre">Nombre:</label>
-      <input
-        type="text"
-        placeholder="Ingrese su nombre"
-        name="nombre"
-      /><br /><br />
+      <input type="text" id="nombre" name="nombre" /><br /><br />
 
       <label for="apellido">Apellido:</label>
-      <input
-        type="text"
-        placeholder="Ingrese su apellido"
-        name="apellido"
-      /><br /><br />
-
-      <h2>Registro del libro</h2>
+      <input type="text" id="apellido" name="apellido" /><br /><br />
+      <h2>Información del libro</h2>
       <label for="titulo">Título del Libro:</label>
-      <input
-        type="text"
-        name="titulo"
-        placeholder="Ingrese el titulo del libro"
-      /><br /><br />
+      <input type="text" id="titulo" name="titulo" /><br /><br />
 
       <label for="autor">Autor del Libro:</label>
-      <input
-        type="text"
-        placeholder="Ingrese el autor"
-        name="autor"
-      /><br /><br />
+      <input type="text" id="autor" name="autor" /><br /><br />
 
       <label for="editorial">Editorial:</label>
-      <input
-        type="text"
-        placeholder="Ingrese la editorial"
-        name="editorial"
-      /><br /><br />
+      <input type="text" id="editorial" name="editorial" /><br /><br />
 
-      <label for="year">Año de Publicación:</label>
-      <input type="text" placeholder="Ingrese el año" name="year" /><br /><br />
+      <label for="año">Año de Publicación:</label>
+      <input type="text" id="año" name="año" /><br /><br />
 
       <input type="submit" value="Enviar" />
     </form>
